@@ -1,21 +1,23 @@
-{% extends 'index.html' %} {% block content %}
+{% extends 'index.html' %} {% load static %} {% block content %}
+
 <div
-  class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24"
+  class="bg-fixed bg-cover min-h-screen bg-center relative"
+  style="background-image: url(/static/upay_home.jpeg)"
 >
-  <h1>
-    As part of our industrial attachment, our assigned project revolves around
-    the development of a credit scoring system aimed at assessing the
-    eligibility of Upay users for loans. This system leverages machine learning
-    techniques to use multiple data files, including transaction history and
-    customer information, to predict the likelihood of a user receiving a loan.
-    The ultimate goal of this project is to deliver an efficient and precise
-    credit scoring system that facilitates loan disbursement decision-making.
-    Additionally, it will offer decision makers some insights into their
-    customer\’s loan eligibility and the potential loan amount they could
-    receive. We are also developing a user interface where users can upload data
-    files to receive loan decisions, loan probability assessments, and suggested
-    loan amounts for eligible applicants.
-  </h1>
+  <div
+    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"
+  >
+    <div class="container mx-auto text-center p-2">
+      <h1 class="text-white font-bold text-2xl text-justify">
+        The project focuses on developing a credit scoring system for Upay users
+        using machine learning techniques, leveraging various data sources to
+        predict loan eligibility with precision. This system aims to streamline
+        loan disbursement decisions and provide valuable insights to
+        decision-makers. Additionally, an automated user interface is being
+        developed to facilitate faster decision-making.
+      </h1>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
