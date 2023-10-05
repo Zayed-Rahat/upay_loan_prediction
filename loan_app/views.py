@@ -1,13 +1,14 @@
 import csv
 from django.shortcuts import render,redirect
+from django.urls import reverse
 from .models import WalletInfo 
 import pandas as pd
 import joblib
 from .frequency import frequency_ranges
-from .constant import addresses,classes,occupations
+from .constant import addresses,occupations
 from django.http import HttpResponse
-
-
+from django.contrib import messages
+    
 # Load the pre-trained decision tree model
 Upay_Loan_System_model = joblib.load('Models/Upay_Loan_System_model.pkl')
 
@@ -81,7 +82,8 @@ def upload_csv_customer_info(request):
                     occupation=row['Occupation']
                 )
 
-            return redirect('upload_csv')  # Redirect to a success page after data insertion    
+            messages.success(request, f'File has been uploaded successfully!')
+            return redirect('upload_csv')    
     return render(request, 'upload_csv.html')
 
 
