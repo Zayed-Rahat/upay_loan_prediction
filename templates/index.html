@@ -7,9 +7,9 @@
 </head>
 <body class="bg-white text-gray-600">
     {% include 'navbar.html' %}
+    {% include 'messages.html' %}
         {% block body %}
             <div id="main">
-                {% include 'messages.html' %}
                 {% block content %}
                 {% endblock %}
             </div>

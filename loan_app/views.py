@@ -82,7 +82,7 @@ def upload_csv_customer_info(request):
                     occupation=row['Occupation']
                 )
 
-            messages.success(request, f'File has been uploaded successfully!')
+            messages.success(request, f'Customer Information File has been uploaded successfully!')
             return redirect('upload_csv')    
     return render(request, 'upload_csv.html')
 
